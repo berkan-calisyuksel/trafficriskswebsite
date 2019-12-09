@@ -417,3 +417,10 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+body {
+    font-family: 'Nunito', sans-serif;
+    width: 50%;
+    margin: auto;
+    display: block;
+}
+
