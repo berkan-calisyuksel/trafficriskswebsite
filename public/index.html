@@ -4,6 +4,11 @@
 	<meta charset="UTF-8">
 	<title>Traffic Risks in Istanbul</title>
 	<h1 style="text-align:center;">Traffic Risks in Istanbul</h1>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	
 	<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
@@ -29,12 +34,15 @@
 					var aciklama=$(this).attr("aciklama");
 					$("#sehir").text(id);	
 					alert(aciklama)
-				});
 			});
 
 
-			 
-		});
+
+			
+			
+			
+		});			 
+	});
 	</script>
 	<style type="text/css">
 		body{background:#ddd;}
@@ -43,10 +51,62 @@
 	</style>
 </head>
 <body>
+		<div class="alert alert-warning alert-dismissible">
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				<strong>Bilgi!</strong> Asagida kaza oranlarinin ilcelere gore dagilimini gorebilirsiniz
+		</div>
+		
+<!-- Button to Open the Modal -->
+<div class=text-center>
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> Trafik Kaza Nedenleri icin Tiklayiniz</button>
+</div>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Yıl bazında yaşanan kazaların oranlarını aşağıda görebilirsiniz</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+			<p>
+			Araca yandan çarpma ya da çarpışma (%29,67)
+			<br>Yayaya çarpma (%16,64)
+			<br>Aracın yoldan çıkması (%15,29)
+			<br>Araca arkadan çarpma (%9,86)
+			<br>Sabit cisme çarpma (%9,32)
+			<br>Aracın Devrilmesi (%9,23)
+			<br>Karşılıklı çarpışma (%6,40)
+			<br>Duran araca çarpma (%2,49)
+			<br>Araçtan düşen insan (%0,58)
+			<br>Aracın hayvana çarpması (%0,47)
+			<br>Araçtan düşen cisim (%0,05)
+
+			</p>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
 <div id="sehir">İlçe Adı</div>
-<p style="text-align:center;"><font color="red">High - Red</font></p>
-<p style="text-align:center;"><font color="orange">Medium - Orange</font></p>
-<p style="text-align:center;"><font color="green">Low - Green</font></p>
+
+<div class=text-center>
+<span class="badge badge-danger">High - Red</span>
+<span class="badge badge-warning">Medium - Yellow</span>
+<span class="badge badge-success">Low - Green</span>
+</div>
 
 
 
