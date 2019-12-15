@@ -6,9 +6,13 @@
     <body>
         <table>
             <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Address</th>
+            <th>Ilce Adi</th>
+            <th>Yillik Kaza Istatistikleri</th>
+            <th>En Fazla Kaza Alan Bolge</th>
+            <th>Olumlu Yaralanmali</th>
+            <th>Maddi Hasarli</th>
+            <th>Olu</th>
+            <th>Yarali</th>
             </tr>
 
         <?php
@@ -27,13 +31,25 @@
         while($row = $result->fetch_assoc()){
             echo '<tr>';
             echo '<td>';
-            echo $row['sId'];
+            echo $row['ılceAdi'];
             echo '</td>';
             echo '<td>';
-            echo $row['sName'];
+            echo $row['yillikKaza'];
             echo '</td>';
             echo '<td>';
-            echo $row['sAddress'];
+            echo $row['enFazlaKaza'];
+            echo '</td>';
+            echo '<tr>';
+            echo $row['olumluYaralanmali'];
+            echo '<tr>';
+            echo '<td>';
+            echo $row['maddiHasarli'];
+            echo '</td>';
+            echo '<td>';
+            echo $row['olu'];
+            echo '</td>';
+            echo '<td>';
+            echo $row['yarali'];
             echo '</td>';
             echo '<tr>';
         }
